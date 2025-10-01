@@ -43,12 +43,11 @@ public class ProductSpringJpaAdapter implements ProductPersistencePort {
     }
 
     @Override
-    public List<Product> getAll(int pageNumber, int pageSize) {
-
-        Page<ProductEntity> products = productRepository.findAll(PageRequest.of(pageNumber, pageSize));
-
-        return products.stream()
-                .map(productEntityMapper::toDomain)
+    public List<Product> findAll(int offset, int limit) {
+        Pageable pageable = PageRequest.of(offset / limit, limit);
+        return productRepository.findAll(pageable)
+                .stream()
+                .map(product -> productEntityMapper.toDomain(product))
                 .toList();
     }
 
@@ -57,7 +56,7 @@ public class ProductSpringJpaAdapter implements ProductPersistencePort {
 
         var product = productRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Product not found"));
-        productUpdateMapper.updateEntity(request,product);
+        productUpdateMapper.updateEntity(request, product);
         var productUpdated = productRepository.save(product);
         return productEntityMapper.toDomain(productUpdated);
 
@@ -66,6 +65,11 @@ public class ProductSpringJpaAdapter implements ProductPersistencePort {
     @Override
     public void delete(UUID id) {
 
+    }
+
+    @Override
+    public Long count() {
+        return productRepository.count();
     }
 
 }

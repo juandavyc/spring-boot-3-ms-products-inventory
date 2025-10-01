@@ -5,15 +5,14 @@ import com.juandavyc.product.application.mapper.ProductRequestMapper;
 import com.juandavyc.product.application.usecases.ProductService;
 import com.juandavyc.product.domain.model.Product;
 import com.juandavyc.product.domain.model.dto.ProductDto;
+import com.juandavyc.product.domain.model.dto.ProductPageDto;
 import com.juandavyc.product.domain.model.dto.request.ProductRequest;
 import com.juandavyc.product.domain.port.ProductPersistencePort;
 import com.juandavyc.product.infrastructure.adapter.mapper.ProductUpdateMapper;
 import lombok.RequiredArgsConstructor;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,6 +20,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class ProductManagementService implements ProductService {
 
     private final ProductPersistencePort productPersistencePort;
@@ -29,7 +29,7 @@ public class ProductManagementService implements ProductService {
 
     @Override
     public ProductDto create(ProductRequest request) {
-
+        log.info("Creating product: {}", request.getName());
         var productToCreate = productRequestMapper.toDomain(request);
 
         var productCreated = productPersistencePort.create(productToCreate);
@@ -45,15 +45,22 @@ public class ProductManagementService implements ProductService {
     }
 
     @Override
-    public Page<ProductDto> getAll(Pageable pageable) {
-        List<Product> products = productPersistencePort.getAll(
-                pageable.getPageNumber(),
-                pageable.getPageSize()
-        );
-        List<ProductDto> dtos = products.stream()
-                .map(productDtoMapper::toDto)
+    public ProductPageDto getAll(int page, int size) {
+
+
+        int offset = page * size;
+
+        List<Product> products = productPersistencePort.findAll(offset, size);
+        long totalElements = productPersistencePort.count();
+
+        int totalPages = (int) Math.ceil((double) totalElements / size);
+
+        List<ProductDto> productDtos = products.stream()
+                .map(product -> productDtoMapper.toDto(product))
                 .toList();
-        return new PageImpl<>(dtos, pageable, dtos.size());
+
+        return new ProductPageDto(productDtos, totalElements, totalPages, page, size);
+
     }
 
     @Override

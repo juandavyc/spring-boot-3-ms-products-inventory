@@ -1,5 +1,6 @@
 package com.juandavyc.product.domain.model.dto;
 
+
 import java.math.BigDecimal;
 import java.util.UUID;
 

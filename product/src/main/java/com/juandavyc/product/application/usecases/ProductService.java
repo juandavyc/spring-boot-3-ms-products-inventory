@@ -2,6 +2,7 @@ package com.juandavyc.product.application.usecases;
 
 
 import com.juandavyc.product.domain.model.dto.ProductDto;
+import com.juandavyc.product.domain.model.dto.ProductPageDto;
 import com.juandavyc.product.domain.model.dto.request.ProductRequest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,10 +15,12 @@ public interface ProductService  {
     ProductDto create(ProductRequest request);
     ProductDto getById(UUID id);
 
-    Page<ProductDto> getAll(Pageable pageable);
+    ProductPageDto getAll(int offset, int limit);
 
     void delete(UUID id);
 
     ProductDto update(UUID id, ProductRequest productRequest);
+
+
 }
 

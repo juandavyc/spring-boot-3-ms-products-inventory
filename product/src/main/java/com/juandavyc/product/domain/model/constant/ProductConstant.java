@@ -10,5 +10,7 @@ public class ProductConstant {
     public static final String PRODUCT_DELETED = "Product deleted successfully";
     public static final String PRODUCT_NOT_FOUND = "Product not found";
     public static final String PRODUCT_ALREADY_EXISTS = "Product already exists";
+    public static final String RESOURCE_TYPE = "products";
+    public static final String BASE_PATH = "/api/products";
 
 }

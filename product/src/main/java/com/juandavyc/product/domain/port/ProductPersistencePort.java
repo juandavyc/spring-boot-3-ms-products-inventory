@@ -9,8 +9,9 @@ public interface ProductPersistencePort {
 
     Product create(Product request);
     Product getById(UUID id);
-    List<Product> getAll(int pageNumber, int pageSize);
+    List<Product> findAll(int offset, int limit);
     Product update(UUID id, Product request);
     void delete(UUID id);
 
+    Long count();
 }
