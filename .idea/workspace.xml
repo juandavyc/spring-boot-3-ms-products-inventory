@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6f5213de-5af3-4721-b9da-8148cc7e17d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/mapper/ProductDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/mapper/ProductRequestMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/service/ProductManagementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/usecases/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/model/constant/ProductConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/model/dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/model/dto/request/ProductRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/port/ProductPersistencePort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/ProductSpringJpaAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/entity/ProductEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/mapper/ProductEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/mapper/ProductUpdateMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="33RlZBP8hHdVlhBboU6i2sRq4Eh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ProductApplication.executor": "Run",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/home/juan/Escritorio/interview-3/microservices",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.juandavyc.product.infrastructure.adapter.mapper" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ProductApplication">
+    <configuration name="InventoryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="inventory" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.juandavyc.inventory.InventoryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="21 (2)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="product" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.juandavyc.product.ProductApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.InventoryApplication" />
+      <item itemvalue="Spring Boot.ProductApplication" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26927.53" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.26927.53" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6f5213de-5af3-4721-b9da-8148cc7e17d3" name="Changes" comment="" />
+      <created>1759287818132</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1759287818132</updated>
+      <workItem from="1759287819240" duration="11419000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
