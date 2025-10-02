@@ -4,6 +4,5 @@ public record ProductApiResponse(
         ProductApiData data,
         Links links
 ) {
-    public record Links(String self) {
-    }
+    public record Links(String self) {}
 }

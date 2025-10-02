@@ -1,20 +1,21 @@
 package com.juandavyc.product.application.service;
 
+import com.juandavyc.product.application.exceptions.ProductAlreadyExistsException;
 import com.juandavyc.product.application.mapper.ProductDtoMapper;
 import com.juandavyc.product.application.mapper.ProductRequestMapper;
 import com.juandavyc.product.application.usecases.ProductService;
 import com.juandavyc.product.domain.model.Product;
 import com.juandavyc.product.domain.model.dto.ProductDto;
 import com.juandavyc.product.domain.model.dto.ProductPageDto;
-import com.juandavyc.product.domain.model.dto.request.ProductRequest;
 import com.juandavyc.product.domain.port.ProductPersistencePort;
-import com.juandavyc.product.infrastructure.adapter.mapper.ProductUpdateMapper;
+import com.juandavyc.product.application.exceptions.ProductNotFoundException;
+import com.juandavyc.product.infrastructure.rest.dto.request.ProductRequestDto;
 import lombok.RequiredArgsConstructor;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,36 +28,33 @@ public class ProductManagementService implements ProductService {
     private final ProductRequestMapper productRequestMapper;
     private final ProductDtoMapper productDtoMapper;
 
+
     @Override
-    public ProductDto create(ProductRequest request) {
+    public ProductDto create(ProductRequestDto request) {
         log.info("Creating product: {}", request.getName());
+        validateProductNameAvailable(request.getName());
+
         var productToCreate = productRequestMapper.toDomain(request);
-
-        var productCreated = productPersistencePort.create(productToCreate);
-
+        productToCreate.setDeleted(false);
+        var productCreated = productPersistencePort.save(productToCreate);
         return productDtoMapper.toDto(productCreated);
-
     }
 
     @Override
     public ProductDto getById(UUID id) {
-        var product = productPersistencePort.getById(id);
+        var product = productPersistencePort.findById(id)
+                .orElseThrow(() -> new ProductNotFoundException("ID", id.toString()));
         return productDtoMapper.toDto(product);
     }
 
     @Override
     public ProductPageDto getAll(int page, int size) {
-
-
         int offset = page * size;
-
-        List<Product> products = productPersistencePort.findAll(offset, size);
+        var products = productPersistencePort.findAll(offset, size);
         long totalElements = productPersistencePort.count();
-
         int totalPages = (int) Math.ceil((double) totalElements / size);
-
-        List<ProductDto> productDtos = products.stream()
-                .map(product -> productDtoMapper.toDto(product))
+        var productDtos = products.stream()
+                .map(productDtoMapper::toDto)
                 .toList();
 
         return new ProductPageDto(productDtos, totalElements, totalPages, page, size);
@@ -64,16 +62,45 @@ public class ProductManagementService implements ProductService {
     }
 
     @Override
-    public void delete(UUID id) {
+    public ProductDto update(UUID id, ProductRequestDto request) {
 
+        var existingProduct = productPersistencePort.findById(id)
+                .orElseThrow(() -> new ProductNotFoundException("ID", id.toString()));
+
+        if (request.getName() != null && !request.getName().equals(existingProduct.getName())) {
+            validateProductNameAvailable(request.getName());
+        }
+
+        String newName = (request.getName() != null) ? request.getName() : existingProduct.getName();
+        BigDecimal newPrice = (request.getPrice() != null) ? request.getPrice() : existingProduct.getPrice();
+
+        var updatedProduct = new Product(
+                existingProduct.getId(),
+                newName,
+                newPrice,
+                existingProduct.getDeleted()
+        );
+
+        var savedProduct = productPersistencePort.save(updatedProduct);
+        return productDtoMapper.toDto(savedProduct);
     }
 
     @Override
-    public ProductDto update(UUID id, ProductRequest request) {
+    public ProductDto softDelete(UUID id) {
+        var product = productPersistencePort.findById(id)
+                .orElseThrow(() -> new ProductNotFoundException("ID", id.toString()));
 
-        Product productToUpdate = productRequestMapper.toDomain(request);
-        Product updatedProduct = productPersistencePort.update(id, productToUpdate);
+        product.setDeleted(true);
 
-        return productDtoMapper.toDto(updatedProduct);
+        var deletedProduct = productPersistencePort.save(product);
+        return productDtoMapper.toDto(deletedProduct);
+    }
+
+
+    private void validateProductNameAvailable(String productName) {
+        boolean nameExists = productPersistencePort.existsByNameAndDeletedIsFalse(productName);
+        if (nameExists) {
+            throw new ProductAlreadyExistsException("Name", productName);
+        }
     }
 }

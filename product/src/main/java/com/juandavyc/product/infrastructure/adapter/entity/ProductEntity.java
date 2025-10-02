@@ -16,18 +16,13 @@ import java.util.UUID;
 @NoArgsConstructor
 @Getter
 @Setter
-public class ProductEntity {
+public class ProductEntity extends BaseEntity {
 
     @Id
     @GeneratedValue
     private UUID id;
     private String name;
     private BigDecimal price;
-//    private boolean deleted;
-
-//    @PrePersist
-//    private void prePersist() {
-//        deleted = false;
-//    }
+    private Boolean deleted;
 
 }

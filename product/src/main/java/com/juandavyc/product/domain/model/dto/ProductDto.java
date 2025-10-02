@@ -7,5 +7,6 @@ import java.util.UUID;
 public record ProductDto(
         UUID id,
         String name,
-        BigDecimal price
+        BigDecimal price,
+        Boolean deleted
 ) {}

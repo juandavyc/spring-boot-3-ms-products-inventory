@@ -1,7 +1,7 @@
 package com.juandavyc.product.infrastructure.rest.helper;
 
 
-import com.juandavyc.product.domain.model.constant.ProductConstant;
+
 import com.juandavyc.product.domain.model.dto.ProductDto;
 import com.juandavyc.product.domain.model.dto.ProductPageDto;
 import com.juandavyc.product.infrastructure.rest.dto.ProductApiData;
@@ -12,10 +12,12 @@ import java.util.List;
 
 public class JsonResponseBuilder {
 
+    public static final String RESOURCE_TYPE = "products";
+    public static final String BASE_PATH = "/api/products";
 
     public static ProductApiResponse buildProduct(ProductDto product) {
         ProductApiData data = toJsonApiData(product);
-        ProductApiResponse.Links links = new ProductApiResponse.Links(ProductConstant.BASE_PATH +"/"+ product.id());
+        ProductApiResponse.Links links = new ProductApiResponse.Links(BASE_PATH +"/"+ product.id());
         return new ProductApiResponse(data, links);
     }
 
@@ -45,11 +47,12 @@ public class JsonResponseBuilder {
 
 
     private static String buildLink(int page, int size) {
-        return ProductConstant.BASE_PATH + "?page=" + page + "&size=" + size;
+        return BASE_PATH + "?page=" + page + "&size=" + size;
     }
+
     private static ProductApiData toJsonApiData(ProductDto product) {
         return new ProductApiData(
-                ProductConstant.RESOURCE_TYPE,
+                RESOURCE_TYPE,
                 product.id().toString(),
                 product
         );
