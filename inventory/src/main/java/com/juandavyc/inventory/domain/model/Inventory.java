@@ -6,12 +6,11 @@ public class Inventory {
 
     private UUID productId;
     private Integer quantity;
-    private Boolean deleted;
 
-    public Inventory(UUID productId, Integer quantity, Boolean deleted) {
+
+    public Inventory(UUID productId, Integer quantity) {
         this.productId = productId;
         this.quantity = quantity;
-        this.deleted = deleted;
     }
 
     public Inventory() {
@@ -33,11 +32,5 @@ public class Inventory {
         this.quantity = quantity;
     }
 
-    public Boolean getDeleted() {
-        return deleted;
-    }
 
-    public void setDeleted(Boolean deleted) {
-        this.deleted = deleted;
-    }
 }

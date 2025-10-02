@@ -4,7 +4,6 @@ import com.juandavyc.inventory.domain.model.Inventory;
 import com.juandavyc.inventory.infrastructure.adapter.entity.InventoryEntity;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 
 @Mapper(componentModel = "spring")

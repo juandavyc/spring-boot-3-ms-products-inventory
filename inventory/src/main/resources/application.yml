@@ -1,7 +1,29 @@
-
 spring:
   application:
     name: inventory
+
+  datasource:
+    url: jdbc:h2:mem:inventoriesdb
+    username: sa
+    password: sc
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    #    hibernate:
+    #      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+  cloud:
+    openfeign:
+      client:
+        config:
+          product-service:
+            url: http://localhost:8082
+            connectTimeout: 5000
+            readTimeout: 5000
+            loggerLevel: basic
 
 server:
   port: 8081

@@ -5,289 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f5213de-5af3-4721-b9da-8148cc7e17d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/exceptions/InvalidRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/exceptions/InventoryAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/exceptions/InventoryNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryDtoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryRequestMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/service/InventoryManagementService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/usecases/InventoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/Inventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/dto/InventoryDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/dto/InventoryPageDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/dto/request/InventoryRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/port/InventoryPersistencePort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/InventorySpringJpaAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/entity/InventoryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/mapper/InventoryEntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/repository/InventoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/auditor/AuditorAwareImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/advice/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiPageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/error/JsonApiError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/error/JsonApiErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/error/JsonApiErrorSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/request/InventoryRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/helper/JsonResponseBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/port/ProductPersistencePort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/ProductFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/adapter/ProductFeignAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/dto/ProductApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/mapper/ProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/controller/InventoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/ProductData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/css/coverage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/css/idea.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/img/arrowDown.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/img/arrowUp.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/js/highlight.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/js/highlightjs-line-numbers.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-10/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-10/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-10/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-10/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-10/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-10/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-10/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-10/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-10/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-10/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-10/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-11/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-11/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-11/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-11/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-11/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-11/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-11/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-11/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-11/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-11/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-11/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-12/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-12/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-12/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-12/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-12/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-12/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-12/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-12/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-12/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-12/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-12/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-13/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-13/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-13/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-13/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-13/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-13/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-13/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-13/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-13/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-13/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-13/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-14/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-14/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-14/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-14/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-14/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-14/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-14/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-14/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-14/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-14/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-14/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/sources/source-4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-6/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-6/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-6/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-6/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-6/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-6/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-6/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-6/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-6/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-6/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-6/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-6/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-7/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-7/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-7/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-7/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-7/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-7/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-7/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-7/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-7/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-7/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-7/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-8/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-8/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-8/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-8/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-8/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-8/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-8/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-8/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-8/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-8/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-8/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-9/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-9/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-9/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-9/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-9/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-9/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-9/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-9/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-9/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-9/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-9/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-9/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-a/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-a/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-a/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-a/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-a/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-a/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-a/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-a/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-a/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-a/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-a/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-a/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-b/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-b/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-b/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-b/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-b/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-b/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-b/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-b/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-b/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-b/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-b/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-c/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-c/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-c/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-c/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-c/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-c/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-c/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-c/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-c/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-c/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-c/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-d/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-d/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-d/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-d/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-d/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-d/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-d/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-d/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-d/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-d/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-d/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-e/sources/source-4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-f/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-f/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-f/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-f/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-f/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-f/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-f/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-f/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-f/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-f/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-f/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-f/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-f/sources/source-3.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/InventoryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/InventoryApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryDtoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryDtoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryRequestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryRequestMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/service/InventoryManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/service/InventoryManagementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/usecases/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/usecases/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/dto/InventoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/dto/InventoryDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/dto/InventoryPageDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/port/InventoryPersistencePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/port/InventoryPersistencePort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/InventorySpringJpaAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/InventorySpringJpaAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/mapper/InventoryEntityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/mapper/InventoryEntityMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/repository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/repository/InventoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiPageResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/helper/JsonResponseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/helper/JsonResponseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -536,7 +283,7 @@
       <workItem from="1759373222990" duration="7189000" />
       <workItem from="1759380455015" duration="6109000" />
       <workItem from="1759412425344" duration="8375000" />
-      <workItem from="1759420827095" duration="3591000" />
+      <workItem from="1759420827095" duration="13327000" />
     </task>
     <servers />
   </component>
