@@ -19,4 +19,7 @@ public interface ProductFeignClient {
     @GetMapping("/api/products/{productId}")
     ProductApiResponse getProductById(@PathVariable("productId") UUID productId);
 
+    @GetMapping("/actuator/health")
+    String getHealth();
+
 }

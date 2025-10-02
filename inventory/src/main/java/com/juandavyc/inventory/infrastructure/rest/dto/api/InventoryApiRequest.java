@@ -9,10 +9,10 @@ import lombok.Setter;
 
 @Setter
 @Getter
-@Schema(description = "JSON API request wrapper for product operations")
+@Schema(description = "JSON API request wrapper for operations")
 public class InventoryApiRequest {
     @Valid
-    @Schema(description = "Main data object containing product information")
+    @Schema(description = "Main data object containing information")
     private Data data;
 
     @Setter

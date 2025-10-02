@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  products:
+    image: juandavyc/product:s1
+    container_name: products
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_SECURITY_API_KEY=miclave
+    networks:
+      - app-network
+
+  inventory:
+    image: juandavyc/inventory:s1
+    container_name: inventory
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_SECURITY_API_KEY=miclave
+      - PRODUCT_SERVICE_URL=http://products:8082
+    depends_on:
+      - products
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

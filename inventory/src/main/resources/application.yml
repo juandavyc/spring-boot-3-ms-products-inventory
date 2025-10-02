@@ -11,8 +11,6 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     show-sql: true
-    #    hibernate:
-    #      ddl-auto: update
   h2:
     console:
       enabled: true
@@ -21,7 +19,7 @@ spring:
       client:
         config:
           product-service:
-            url: http://localhost:8082
+            url: ${PRODUCT_SERVICE_URL:http://localhost:8082}
             connectTimeout: 2000
             readTimeout: 5000
 
@@ -38,15 +36,21 @@ resilience4j.retry:
 
 logging:
   level:
-    io.github.resilience4j.retry: DEBUG
+    root: INFO
+  pattern:
+    console: '{"time":"%d{yyyy-MM-dd HH:mm:ss}","level":"%p","service":"%X{spring.application.name}","thread":"%t","logger":"%c","message":"%m"}%n'
+
 
 management:
   endpoints:
     web:
       exposure:
         include: health, metrics
+    endpoint:
+      health:
+        show-details: always
 server:
   port: 8081
 
 security:
-  api-key: my-secret-key
+  api-key: ${SPRING_SECURITY_API_KEY:secret-key}

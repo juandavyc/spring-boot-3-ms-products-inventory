@@ -5,29 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f5213de-5af3-4721-b9da-8148cc7e17d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/exceptions/ProductServiceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/config/FeignConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/config/FeignErrorDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/config/FeignInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/controller/security/ApyKeyFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/health/ProductServiceHealthIndicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/exceptions/InventoryAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/exceptions/ResourceAlreadyExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/exceptions/InventoryNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/exceptions/ResourceNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryDtoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryDtoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryRequestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryRequestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/service/InventoryManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/service/InventoryManagementService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/ProductFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/ProductFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/adapter/ProductFeignAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/adapter/ProductFeignAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/dto/ProductApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/dto/ProductApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/advice/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/advice/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/controller/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/api/InventoryApiRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/api/InventoryApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/helper/JsonResponseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/helper/JsonResponseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryData.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/ProductData.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/ProductData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/api/InventoryApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/api/InventoryApiRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/test/java/com/juandavyc/product/controller/ProductControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/test/java/com/juandavyc/product/controller/ProductControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +67,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.InventoryControllerTest.executor": "Run",
+    "JUnit.InventoryControllerTest.shouldCreateInventorySuccessfully.executor": "Run",
     "JUnit.ProductApplicationTests.executor": "Coverage",
     "JUnit.ProductControllerTest.executor": "Coverage",
     "JUnit.ProductControllerTest.shouldCreateProduct.executor": "Coverage",
@@ -141,6 +135,37 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.InventoryApplication">
+    <configuration name="InventoryControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.juandavyc.inventory.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.juandavyc.inventory.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.juandavyc.inventory.controller.InventoryControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryControllerTest.shouldCreateInventorySuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.juandavyc.inventory.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.juandavyc.inventory.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.juandavyc.inventory.controller.InventoryControllerTest" />
+      <option name="METHOD_NAME" value="shouldCreateInventorySuccessfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="product" />
       <extension name="coverage">
@@ -171,22 +196,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductSpringJpaAdapterTest.count_ShouldReturnCountOfOnlyActiveProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="product" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.juandavyc.product.adapter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.juandavyc.product.adapter" />
-      <option name="MAIN_CLASS_NAME" value="com.juandavyc.product.adapter.ProductSpringJpaAdapterTest" />
-      <option name="METHOD_NAME" value="count_ShouldReturnCountOfOnlyActiveProducts" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProductSpringJpaAdapterTest.findAll_ShouldReturnOnlyActiveProducts_WithCorrectPagination" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="product" />
       <extension name="coverage">
@@ -198,22 +207,6 @@
       <option name="PACKAGE_NAME" value="com.juandavyc.product.adapter" />
       <option name="MAIN_CLASS_NAME" value="com.juandavyc.product.adapter.ProductSpringJpaAdapterTest" />
       <option name="METHOD_NAME" value="findAll_ShouldReturnOnlyActiveProducts_WithCorrectPagination" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductSpringJpaAdapterTest.findById_ShouldReturnProduct_WhenActiveProductExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="product" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.juandavyc.product.adapter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.juandavyc.product.adapter" />
-      <option name="MAIN_CLASS_NAME" value="com.juandavyc.product.adapter.ProductSpringJpaAdapterTest" />
-      <option name="METHOD_NAME" value="findById_ShouldReturnProduct_WhenActiveProductExists" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -238,21 +231,21 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.InventoryControllerTest" />
+      <item itemvalue="JUnit.InventoryControllerTest.shouldCreateInventorySuccessfully" />
       <item itemvalue="JUnit.ProductSpringJpaAdapterTest" />
-      <item itemvalue="JUnit.ProductSpringJpaAdapterTest.count_ShouldReturnCountOfOnlyActiveProducts" />
       <item itemvalue="JUnit.ProductSpringJpaAdapterTest.findAll_ShouldReturnOnlyActiveProducts_WithCorrectPagination" />
-      <item itemvalue="JUnit.ProductSpringJpaAdapterTest.findById_ShouldReturnProduct_WhenActiveProductExists" />
       <item itemvalue="JUnit.ProductControllerTest" />
       <item itemvalue="Spring Boot.InventoryApplication" />
       <item itemvalue="Spring Boot.ProductApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InventoryControllerTest" />
+        <item itemvalue="JUnit.InventoryControllerTest.shouldCreateInventorySuccessfully" />
         <item itemvalue="JUnit.ProductControllerTest" />
         <item itemvalue="JUnit.ProductSpringJpaAdapterTest.findAll_ShouldReturnOnlyActiveProducts_WithCorrectPagination" />
         <item itemvalue="JUnit.ProductSpringJpaAdapterTest" />
-        <item itemvalue="JUnit.ProductSpringJpaAdapterTest.count_ShouldReturnCountOfOnlyActiveProducts" />
-        <item itemvalue="JUnit.ProductSpringJpaAdapterTest.findById_ShouldReturnProduct_WhenActiveProductExists" />
       </list>
     </recent_temporary>
   </component>
@@ -276,12 +269,27 @@
       <workItem from="1759373222990" duration="7189000" />
       <workItem from="1759380455015" duration="6109000" />
       <workItem from="1759412425344" duration="8375000" />
-      <workItem from="1759420827095" duration="19393000" />
+      <workItem from="1759420827095" duration="26861000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.cloud:spring-cloud-context" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+    <option featureType="dependencySupport" implementationName="java:junit:junit" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.wiremock:wiremock" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -33,19 +33,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ProductControllerTest {
 
-    // no voy hacer los comentarios en ingles, ya el tiempo no da.
-
-    // @Container
-//    @ServiceConnection
-//    static PostgreSQLContainer<?> postgreSQLContainer =
-//            new PostgreSQLContainer<>(DockerImageName.parse("postgres:16.2"));
-//
-//    @Test
-//    void canEstablishedConnection() {
-//        assertThat(postgreSQLContainer.isCreated()).isTrue();
-//        assertThat(postgreSQLContainer.isRunning()).isTrue();
-//    }
-
     @Autowired
     TestRestTemplate restTemplate;
 
@@ -119,7 +106,7 @@ public class ProductControllerTest {
                         }
                 );
 
-        // Then debe retornar 400
+        // debe retornar 400
         assertThat(createResponse.getStatusCode()).
                 isEqualTo(HttpStatus.BAD_REQUEST);
 
@@ -195,7 +182,6 @@ public class ProductControllerTest {
         assertThat(response.getBody().meta().totalElements()).isEqualTo(5);
     }
 
-    // get by id
 
     @Test
     void shouldGetProductById() {
@@ -218,11 +204,9 @@ public class ProductControllerTest {
         Assertions.assertNotNull(createResponse.getBody());
         String productUrl = createResponse.getBody().data().id();
 
-        // When
         ResponseEntity<ProductApiResponse> getResponse =
                 ProductRequestHelper.getProductById(restTemplate, "/" + productUrl, ProductApiResponse.class);
 
-        // Then
         assertThat(getResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
         Assertions.assertNotNull(getResponse.getBody());
 

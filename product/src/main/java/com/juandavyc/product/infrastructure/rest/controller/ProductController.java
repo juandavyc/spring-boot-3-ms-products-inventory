@@ -148,7 +148,7 @@ public class ProductController {
     })
     @PutMapping(path = "/{id}")
     public ResponseEntity<ProductApiResponse> update(
-//            @Parameter(description = "Product ID", example = "123e4567-e89b-12d3-a456-426614174000")
+            @Parameter(description = "Product ID", example = "123e4567-e89b-12d3-a456-426614174000")
             @PathVariable UUID id,
             @Validated(ProductRequestDto.Update.class)
             @RequestBody
@@ -181,7 +181,7 @@ public class ProductController {
     })
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<ProductApiResponse> delete(
-//            @Parameter(description = "Product ID", example = "123e4567-e89b-12d3-a456-426614174000")
+            @Parameter(description = "Product ID", example = "123e4567-e89b-12d3-a456-426614174000")
             @PathVariable UUID id
     ) {
         var product = productService.softDelete(id);
@@ -196,5 +196,6 @@ public class ProductController {
                 .map(ProductApiRequest.Data::getAttributes)
                 .orElseThrow(() -> new InvalidRequestException("Attributes are required"));
     }
+
 
 }
