@@ -7,13 +7,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter
-@Schema(description = "Product attributes for create and update operations")
+@Schema(description = "Inventory attributes for create and update operations")
 public class InventoryRequestDto {
 
     @NotNull(message = "The quantity is required.")

@@ -1,11 +1,12 @@
-package com.juandavyc.product.infrastructure.rest.dto;
+package com.juandavyc.inventory.infrastructure.rest.dto;
 
-import com.juandavyc.product.domain.model.dto.ProductDto;
 
-public record ProductApiData(
+import com.juandavyc.inventory.domain.model.dto.InventoryDto;
+
+public record InventoryApiData(
         String type,
         String id,
-        ProductDto attributes
+        InventoryDto attributes
 ) {
 
 }

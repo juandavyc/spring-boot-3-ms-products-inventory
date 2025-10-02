@@ -1,1 +1,7 @@
-spring.application.name=inventory
+
+spring:
+  application:
+    name: inventory
+
+server:
+  port: 8081

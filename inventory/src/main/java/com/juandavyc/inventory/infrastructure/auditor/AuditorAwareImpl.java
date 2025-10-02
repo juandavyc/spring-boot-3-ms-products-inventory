@@ -1,4 +1,4 @@
-package com.juandavyc.inventory.infrastructure.rest.auditor;
+package com.juandavyc.inventory.infrastructure.auditor;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;
 

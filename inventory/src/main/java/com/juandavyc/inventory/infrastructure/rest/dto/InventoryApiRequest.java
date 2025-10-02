@@ -1,18 +1,16 @@
-package com.juandavyc.product.infrastructure.rest.dto;
+package com.juandavyc.inventory.infrastructure.rest.dto;
 
-import com.juandavyc.product.infrastructure.rest.dto.request.ProductRequestDto;
+import com.juandavyc.inventory.infrastructure.rest.dto.request.InventoryRequestDto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter
 @Getter
 @Schema(description = "JSON API request wrapper for product operations")
-public class ProductApiRequest{
+public class InventoryApiRequest {
     @Valid
     @Schema(description = "Main data object containing product information")
     private Data data;
@@ -31,10 +29,10 @@ public class ProductApiRequest{
         @Valid
         @NotNull(message = "Attributes are required")
         @Schema(
-                description = "Product attributes and properties",
+                description = "Inventory attributes and properties",
                 requiredMode = Schema.RequiredMode.REQUIRED
         )
-        private ProductRequestDto attributes;
+        private InventoryRequestDto attributes;
     }
 
 }

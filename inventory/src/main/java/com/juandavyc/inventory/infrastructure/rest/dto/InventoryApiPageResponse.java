@@ -1,10 +1,10 @@
-package com.juandavyc.product.infrastructure.rest.dto;
+package com.juandavyc.inventory.infrastructure.rest.dto;
 
 
 import java.util.List;
 
-public record ProductApiPageResponse(
-        List<ProductApiData> data,
+public record InventoryApiPageResponse(
+        List<InventoryApiData> data,
         PaginationLinks links,
         PaginationMeta meta
 ) {

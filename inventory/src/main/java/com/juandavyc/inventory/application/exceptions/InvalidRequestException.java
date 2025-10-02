@@ -1,4 +1,4 @@
-package com.juandavyc.product.application.exceptions;
+package com.juandavyc.inventory.application.exceptions;
 
 public class InvalidRequestException extends RuntimeException {
     public InvalidRequestException(String message) {

@@ -1,11 +1,11 @@
-package com.juandavyc.product.infrastructure.rest.dto;
+package com.juandavyc.inventory.infrastructure.rest.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description = "JSON API response for single product")
-public record ProductApiResponse(
+public record InventoryApiResponse(
         @Schema(description = "Product data")
-        ProductApiData data,
+        InventoryApiData data,
         @Schema(description = "HATEOAS links")
         Links links
 ) {

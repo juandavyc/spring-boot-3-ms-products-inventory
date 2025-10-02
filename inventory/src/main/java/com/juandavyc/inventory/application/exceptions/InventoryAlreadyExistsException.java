@@ -4,7 +4,7 @@ public class InventoryAlreadyExistsException extends RuntimeException {
     private final String value;
 
     public InventoryAlreadyExistsException(String field, String value) {
-        super(String.format("Product with %s '%s' already exists", field, value));
+        super(String.format("Inventory with %s '%s' already exists", field, value));
         this.value = value;
     }
 

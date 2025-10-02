@@ -1,7 +1,6 @@
 package com.juandavyc.inventory.infrastructure.rest.dto.error;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.juandavyc.product.infrastructure.rest.dto.error.JsonApiErrorSource;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.util.Map;
