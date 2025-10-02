@@ -58,7 +58,7 @@ public class GlobalExceptionHandler {
                                 "field", fieldError.getField(),
                                 "rejectedValue", String.valueOf(fieldError.getRejectedValue())
                         ),
-                        JsonApiErrorSource.pointer("/data/attributes/" + fieldError.getField())
+                        JsonApiErrorSource.pointer("/"+fieldError.getField().replaceAll("\\.", "/"))
                 ))
                 .collect(Collectors.toList());
 

@@ -1,0 +1,154 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > ProductDtoMapperImpl</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.juandavyc.product.application.mapper</a>
+</div>
+
+<h1>Coverage Summary for Class: ProductDtoMapperImpl (com.juandavyc.product.application.mapper)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ProductDtoMapperImpl</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (1/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92,3%
+  </span>
+  <span class="absValue">
+    (12/13)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.juandavyc.product.application.mapper;
+&nbsp;
+&nbsp;import com.juandavyc.product.domain.model.Product;
+&nbsp;import com.juandavyc.product.domain.model.dto.ProductDto;
+&nbsp;import java.math.BigDecimal;
+&nbsp;import java.util.UUID;
+&nbsp;import javax.annotation.processing.Generated;
+&nbsp;import org.springframework.stereotype.Component;
+&nbsp;
+&nbsp;@Generated(
+&nbsp;    value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+&nbsp;    date = &quot;2025-10-01T23:33:38-0500&quot;,
+&nbsp;    comments = &quot;version: 1.6.3, compiler: javac, environment: Java 21.0.8 (Ubuntu)&quot;
+&nbsp;)
+&nbsp;@Component
+<b class="fc">&nbsp;public class ProductDtoMapperImpl implements ProductDtoMapper {</b>
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public ProductDto toDto(Product domain) {
+<b class="pc">&nbsp;        if ( domain == null ) {</b>
+<b class="nc">&nbsp;            return null;</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        UUID id = null;</b>
+<b class="fc">&nbsp;        String name = null;</b>
+<b class="fc">&nbsp;        BigDecimal price = null;</b>
+<b class="fc">&nbsp;        Boolean deleted = null;</b>
+&nbsp;
+<b class="fc">&nbsp;        id = domain.getId();</b>
+<b class="fc">&nbsp;        name = domain.getName();</b>
+<b class="fc">&nbsp;        price = domain.getPrice();</b>
+<b class="fc">&nbsp;        deleted = domain.getDeleted();</b>
+&nbsp;
+<b class="fc">&nbsp;        ProductDto productDto = new ProductDto( id, name, price, deleted );</b>
+&nbsp;
+<b class="fc">&nbsp;        return productDto;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-10-01 23:52</div>
+</div>
+</body>
+</html>

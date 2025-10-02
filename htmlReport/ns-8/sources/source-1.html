@@ -1,0 +1,180 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > ProductSpringJpaAdapter</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.juandavyc.product.infrastructure.adapter</a>
+</div>
+
+<h1>Coverage Summary for Class: ProductSpringJpaAdapter (com.juandavyc.product.infrastructure.adapter)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ProductSpringJpaAdapter</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (3/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    36,4%
+  </span>
+  <span class="absValue">
+    (8/22)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.juandavyc.product.infrastructure.adapter;
+&nbsp;
+&nbsp;import com.juandavyc.product.domain.model.Product;
+&nbsp;import com.juandavyc.product.domain.port.ProductPersistencePort;
+&nbsp;import com.juandavyc.product.infrastructure.adapter.entity.ProductEntity;
+&nbsp;import com.juandavyc.product.infrastructure.adapter.mapper.ProductEntityMapper;
+&nbsp;import com.juandavyc.product.infrastructure.adapter.repository.ProductRepository;
+&nbsp;import lombok.RequiredArgsConstructor;
+&nbsp;import lombok.extern.slf4j.Slf4j;
+&nbsp;import org.springframework.data.domain.PageRequest;
+&nbsp;import org.springframework.data.domain.Pageable;
+&nbsp;import org.springframework.stereotype.Service;
+&nbsp;
+&nbsp;
+&nbsp;import java.util.List;
+&nbsp;import java.util.Optional;
+&nbsp;import java.util.UUID;
+&nbsp;
+&nbsp;@Service
+&nbsp;@RequiredArgsConstructor
+<b class="fc">&nbsp;@Slf4j</b>
+&nbsp;public class ProductSpringJpaAdapter implements ProductPersistencePort {
+&nbsp;
+&nbsp;    private final ProductRepository productRepository;
+&nbsp;    private final ProductEntityMapper productEntityMapper;
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public Product save(Product request) {
+<b class="fc">&nbsp;        log.debug(&quot;Saving product - id: {}&quot;, request.getId());</b>
+&nbsp;
+<b class="fc">&nbsp;        var entity = productEntityMapper.toEntity(request);</b>
+<b class="fc">&nbsp;        var saved = productRepository.save(entity);</b>
+&nbsp;
+<b class="fc">&nbsp;        log.debug(&quot;Product saved - id: {}&quot;, saved.getId());</b>
+<b class="fc">&nbsp;        return productEntityMapper.toDomain(saved);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public Optional&lt;Product&gt; findById(UUID id) {
+<b class="nc">&nbsp;        log.debug(&quot;finding product by id: {}&quot;, id);</b>
+<b class="nc">&nbsp;        return productRepository.findByIdAndDeletedIsFalse(id)</b>
+<b class="nc">&nbsp;                .map(productEntityMapper::toDomain);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public List&lt;Product&gt; findAll(int offset, int limit) {
+&nbsp;
+<b class="nc">&nbsp;        log.debug(&quot;Finding all products - offset: {}, limit: {}&quot;, offset, limit);</b>
+&nbsp;
+<b class="nc">&nbsp;        Pageable pageable = PageRequest.of(offset / limit, limit);</b>
+<b class="nc">&nbsp;        var products = productRepository.findByDeletedIsFalse(pageable)</b>
+<b class="nc">&nbsp;                .stream()</b>
+<b class="nc">&nbsp;                .map(productEntityMapper::toDomain)</b>
+<b class="nc">&nbsp;                .toList();</b>
+<b class="nc">&nbsp;        log.debug(&quot;found {} products&quot;, products.size());</b>
+<b class="nc">&nbsp;        return products;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public Long count() {
+&nbsp;
+<b class="nc">&nbsp;        var count = productRepository.countByDeletedIsFalse();</b>
+<b class="nc">&nbsp;        log.debug(&quot;Total active products: {}&quot;, count);</b>
+&nbsp;
+<b class="nc">&nbsp;        return count;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public boolean existsByNameAndDeletedIsFalse(String name) {
+&nbsp;
+<b class="fc">&nbsp;        log.debug(&quot;checking if product exists with name: {}&quot;, name);</b>
+&nbsp;
+<b class="fc">&nbsp;        return productRepository.existsByNameAndDeletedIsFalse(name);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-10-01 23:52</div>
+</div>
+</body>
+</html>

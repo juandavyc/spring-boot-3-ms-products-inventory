@@ -11,7 +11,7 @@ public record JsonApiErrorSource(
         String pointer
 ) {
     public static JsonApiErrorSource pointer(String pointer) {
-        return new JsonApiErrorSource(pointer);
+                return new JsonApiErrorSource(pointer);
     }
 
 //    public static JsonApiErrorSource parameter(String parameter) {
