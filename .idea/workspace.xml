@@ -5,37 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f5213de-5af3-4721-b9da-8148cc7e17d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/exceptions/InvalidRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/exceptions/ProductAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/exceptions/ProductNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/auditor/AuditorAwareImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/advice/ProductErrorMessages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/error/JsonApiError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/error/JsonApiErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/error/JsonApiErrorSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/request/ProductRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/ProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/ProductApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/exceptions/InvalidRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/exceptions/InvalidRequestException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/mapper/ProductDtoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/mapper/ProductDtoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/mapper/ProductRequestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/mapper/ProductRequestMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/service/ProductManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/service/ProductManagementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/usecases/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/application/usecases/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/model/constant/ProductConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/model/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/model/dto/ProductDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/model/dto/request/ProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/model/dto/request/ProductRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/port/ProductPersistencePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/domain/port/ProductPersistencePort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/ProductSpringJpaAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/ProductSpringJpaAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/entity/BaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/entity/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/entity/ProductEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/mapper/ProductEntityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/mapper/ProductEntityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/mapper/ProductUpdateMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/adapter/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/auditor/AuditorAwareImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/auditor/AuditorAwareImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/advice/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/advice/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/advice/ProductErrorMessages.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/ProductApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/ProductApiRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/ProductApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/ProductApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/request/ProductApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/ProductApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/error/JsonApiError.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/error/JsonApiError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/error/JsonApiErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/error/JsonApiErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/error/JsonApiErrorSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/error/JsonApiErrorSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/request/ProductRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/dto/request/ProductRequestDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/helper/JsonResponseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/helper/JsonResponseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,14 +42,17 @@
       <list>
         <option value="Interface" />
         <option value="Record" />
-        <option value="Class" />
         <option value="Enum" />
         <option value="Exception" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/controller/ProductController.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -89,6 +87,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -137,11 +136,16 @@
       <option name="presentableId" value="Default" />
       <updated>1759287818132</updated>
       <workItem from="1759287819240" duration="11419000" />
-      <workItem from="1759331818025" duration="31727000" />
+      <workItem from="1759331818025" duration="38615000" />
+      <workItem from="1759373222990" duration="2936000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

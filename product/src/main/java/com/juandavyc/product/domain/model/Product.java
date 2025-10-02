@@ -3,7 +3,7 @@ package com.juandavyc.product.domain.model;
 
 import java.math.BigDecimal;
 import java.util.UUID;
-
+// native language, no lombok
 public class Product {
 
     private UUID id;

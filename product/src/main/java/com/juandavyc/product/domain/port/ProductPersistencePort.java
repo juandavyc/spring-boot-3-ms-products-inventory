@@ -13,5 +13,6 @@ public interface ProductPersistencePort {
     List<Product> findAll(int offset, int limit);
     Long count();
 
+    // verify is available product name
     boolean existsByNameAndDeletedIsFalse(String name);
 }

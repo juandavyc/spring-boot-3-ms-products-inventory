@@ -22,6 +22,8 @@ import java.time.LocalDateTime;
 @ToString
 public abstract class BaseEntity {
 
+    // auditory flags
+
     @CreatedBy
     @Column(updatable = false)
     private String createdBy;
