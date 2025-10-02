@@ -1,7 +1,6 @@
-package com.juandavyc.product.helper;
+package com.juandavyc.product.controller.helper;
 
 import com.juandavyc.product.infrastructure.rest.dto.ProductApiRequest;
-import com.juandavyc.product.infrastructure.rest.dto.ProductApiResponse;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;

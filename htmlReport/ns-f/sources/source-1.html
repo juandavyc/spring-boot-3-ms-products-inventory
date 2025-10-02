@@ -44,26 +44,26 @@ Current scope:     <a href="../../index.html">all classes</a>
   <td class="name">JsonApiError</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/1)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/4)
+    (4/4)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/4)
+    (4/4)
   </span>
 </td>
 </tr>
@@ -83,9 +83,9 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;import java.util.Map;
 &nbsp;
 &nbsp;// single error dto
-<b class="nc">&nbsp;@JsonInclude(JsonInclude.Include.NON_NULL)</b>
+<b class="fc">&nbsp;@JsonInclude(JsonInclude.Include.NON_NULL)</b>
 &nbsp;@Schema(description = &quot;Single error object following JSON API error specification&quot;)
-<b class="nc">&nbsp;public record JsonApiError(</b>
+<b class="fc">&nbsp;public record JsonApiError(</b>
 &nbsp;        @Schema(description = &quot;HTTP status code&quot;, example = &quot;404&quot;)
 &nbsp;        String status,
 &nbsp;
@@ -109,7 +109,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;    // a simple error response
 &nbsp;    @Schema(description = &quot;Creates a simple error response&quot;)
 &nbsp;    public static JsonApiError error(String status, String title, String detail) {
-<b class="nc">&nbsp;        return new JsonApiError(</b>
+<b class="fc">&nbsp;        return new JsonApiError(</b>
 &nbsp;                status,
 &nbsp;                null,
 &nbsp;                title,
@@ -121,7 +121,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;
 &nbsp;    @Schema(description = &quot;Creates a validation error response with source pointer&quot;)
 &nbsp;    public static JsonApiError errors(String detail, Map&lt;String, Object&gt; meta, JsonApiErrorSource source) {
-<b class="nc">&nbsp;        return new JsonApiError(&quot;400&quot;,</b>
+<b class="fc">&nbsp;        return new JsonApiError(&quot;400&quot;,</b>
 &nbsp;                &quot;VALIDATION_ERROR&quot;,
 &nbsp;                &quot;Validation Failed&quot;,
 &nbsp;                detail,
@@ -153,7 +153,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-10-01 23:52</div>
+    <div style="float:right;">generated on 2025-10-02 09:11</div>
 </div>
 </body>
 </html>

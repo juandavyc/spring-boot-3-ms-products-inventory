@@ -44,26 +44,26 @@ Current scope:     <a href="../../index.html">all classes</a>
   <td class="name">JsonApiErrorResponse</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/1)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/3)
+    (3/3)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/3)
+    (3/3)
   </span>
 </td>
 </tr>
@@ -81,15 +81,17 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;
 &nbsp;
 &nbsp;// multiples errors dto
-<b class="nc">&nbsp;public record JsonApiErrorResponse(</b>
+<b class="fc">&nbsp;public record JsonApiErrorResponse(</b>
 &nbsp;        List&lt;JsonApiError&gt; errors
 &nbsp;) {
-&nbsp;    public static JsonApiErrorResponse of(JsonApiError error) {
-<b class="nc">&nbsp;        return new JsonApiErrorResponse(List.of(error));</b>
+&nbsp;    public static JsonApiErrorResponse of(
+&nbsp;            JsonApiError error) {
+<b class="fc">&nbsp;        return new JsonApiErrorResponse(List.of(error));</b>
 &nbsp;    }
 &nbsp;
-&nbsp;    public static JsonApiErrorResponse of(List&lt;JsonApiError&gt; errors) {
-<b class="nc">&nbsp;        return new JsonApiErrorResponse(errors);</b>
+&nbsp;    public static JsonApiErrorResponse of(
+&nbsp;            List&lt;JsonApiError&gt; errors) {
+<b class="fc">&nbsp;        return new JsonApiErrorResponse(errors);</b>
 &nbsp;    }
 &nbsp;}
 </code>
@@ -115,7 +117,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-10-01 23:52</div>
+    <div style="float:right;">generated on 2025-10-02 09:11</div>
 </div>
 </body>
 </html>

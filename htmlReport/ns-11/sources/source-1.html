@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
-  <title>Coverage Report > ProductRepository</title>
+  <title>Coverage Report > ProductService</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -19,17 +19,17 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">com.juandavyc.product.infrastructure.adapter.repository</a>
+    <a href="../index.html">com.juandavyc.product.application.usecases</a>
 </div>
 
-<h1>Coverage Summary for Class: ProductRepository (com.juandavyc.product.infrastructure.adapter.repository)</h1>
+<h1>Coverage Summary for Class: ProductService (com.juandavyc.product.application.usecases)</h1>
 
 <table class="coverageStats">
 <tr>
   <th class="name">Class</th>
 </tr>
 <tr>
-  <td class="name">ProductRepository</td>
+  <td class="name">ProductService</td>
 </tr>
 
 </table>
@@ -39,28 +39,29 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<code class="sourceCode" id="sourceCode">&nbsp;package com.juandavyc.product.infrastructure.adapter.repository;
-&nbsp;
-&nbsp;import com.juandavyc.product.infrastructure.adapter.entity.ProductEntity;
-&nbsp;import org.springframework.data.domain.Page;
-&nbsp;import org.springframework.data.domain.Pageable;
-&nbsp;import org.springframework.data.jpa.repository.JpaRepository;
-&nbsp;import org.springframework.stereotype.Repository;
+<code class="sourceCode" id="sourceCode">&nbsp;package com.juandavyc.product.application.usecases;
 &nbsp;
 &nbsp;
-&nbsp;import java.util.Optional;
+&nbsp;import com.juandavyc.product.domain.model.dto.ProductDto;
+&nbsp;import com.juandavyc.product.domain.model.dto.ProductPageDto;
+&nbsp;import com.juandavyc.product.infrastructure.rest.dto.request.ProductRequestDto;
+&nbsp;
 &nbsp;import java.util.UUID;
 &nbsp;
-&nbsp;@Repository
-&nbsp;public interface ProductRepository extends JpaRepository&lt;ProductEntity, UUID&gt; {
+&nbsp;public interface ProductService  {
 &nbsp;
-&nbsp;    Page&lt;ProductEntity&gt; findByDeletedIsFalse(Pageable pageable);
-&nbsp;    Optional&lt;ProductEntity&gt; findByIdAndDeletedIsFalse(UUID id);
-&nbsp;    long countByDeletedIsFalse();
-&nbsp;    boolean existsByNameAndDeletedIsFalse(String name);
+&nbsp;    ProductDto create(ProductRequestDto request);
 &nbsp;
+&nbsp;    ProductDto getById(UUID id);
+&nbsp;
+&nbsp;    ProductPageDto getAll(int offset, int limit);
+&nbsp;
+&nbsp;    ProductDto update(UUID id, ProductRequestDto request);
+&nbsp;
+&nbsp;    ProductDto softDelete(UUID id);
 &nbsp;
 &nbsp;}
+&nbsp;
 </code>
 </pre>
 </div>
@@ -84,7 +85,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-10-01 23:52</div>
+    <div style="float:right;">generated on 2025-10-02 09:11</div>
 </div>
 </body>
 </html>

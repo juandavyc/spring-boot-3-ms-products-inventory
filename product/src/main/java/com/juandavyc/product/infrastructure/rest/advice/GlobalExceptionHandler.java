@@ -80,13 +80,4 @@ public class GlobalExceptionHandler {
                 .body(JsonApiErrorResponse.of(error));
     }
 
-    @ExceptionHandler(NullPointerException.class)
-    public ResponseEntity<JsonApiErrorResponse> handleNullPointer(NullPointerException ex) {
-        log.error("NullPointer in request processing: {}", ex.getMessage(), ex);
-
-        JsonApiError error = JsonApiError.error("400", "Invalid request structure", ex.getMessage());
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(JsonApiErrorResponse.of(error));
-    }
-
 }

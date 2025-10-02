@@ -1,6 +1,7 @@
 package com.juandavyc.product.controller;
 
-import com.juandavyc.product.helper.ProductRequestHelper;
+import com.juandavyc.product.controller.helper.ProductRequestHelper;
+import com.juandavyc.product.infrastructure.rest.dto.ProductApiPageResponse;
 import com.juandavyc.product.infrastructure.rest.dto.ProductApiRequest;
 import com.juandavyc.product.infrastructure.rest.dto.ProductApiResponse;
 import com.juandavyc.product.infrastructure.rest.dto.error.JsonApiError;
@@ -8,7 +9,6 @@ import com.juandavyc.product.infrastructure.rest.dto.error.JsonApiErrorResponse;
 import com.juandavyc.product.infrastructure.rest.dto.request.ProductRequestDto;
 import org.junit.jupiter.api.Assertions;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.testcontainers.junit.jupiter.Testcontainers;
@@ -148,7 +148,54 @@ public class ProductControllerTest {
         assertThat(error.source().pointer()).isEqualTo("/data/attributes/name");
     }
 
+
+    private ProductApiRequest createData(String name, BigDecimal values) {
+        var request = new ProductApiRequest();
+        var data = new ProductApiRequest.Data();
+        data.setType("products");
+        data.setAttributes(new ProductRequestDto(name, values));
+        request.setData(data);
+        return request;
+    }
+
     // get
+    @Test
+    void shouldGetAllProductsWithDefaultPagination() {
+        for (int i = 0; i < 5; i++) {
+            ResponseEntity<ProductApiResponse> createResponse =
+                    ProductRequestHelper.createProduct(
+                            restTemplate,
+                            createData("Test Laptop" + i, BigDecimal.valueOf(14.4+ i)),
+                            new ParameterizedTypeReference<>() {
+                            }
+                    );
+        }
+
+        String url = "/api/products";
+        ResponseEntity<ProductApiPageResponse> response =
+                restTemplate.exchange(
+                        url,
+                        HttpMethod.GET,
+                        null,
+                        new ParameterizedTypeReference<>() {
+                        }
+                );
+
+        // HTTP 200
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+
+        // cuerpo NO es nulo
+        assertThat(response.getBody()).isNotNull();
+
+        //  productos creados tamaño
+        assertThat(response.getBody().data()).hasSize(5);
+
+        // Verificar metadatos
+        assertThat(response.getBody().meta().currentPage()).isEqualTo(0);
+        assertThat(response.getBody().meta().totalElements()).isEqualTo(5);
+    }
+
+    // get by id
 
     @Test
     void shouldGetProductById() {
@@ -173,7 +220,7 @@ public class ProductControllerTest {
 
         // When
         ResponseEntity<ProductApiResponse> getResponse =
-                ProductRequestHelper.getProductById(restTemplate, "/"+productUrl, ProductApiResponse.class);
+                ProductRequestHelper.getProductById(restTemplate, "/" + productUrl, ProductApiResponse.class);
 
         // Then
         assertThat(getResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
@@ -471,6 +518,41 @@ public class ProductControllerTest {
         assertThat(error.title()).isEqualTo("Product Not Found");
         assertThat(error.detail()).contains(nonExistentId);
     }
+
+    @Test
+    void shouldReturn500_whenServiceThrowsUnexpectedRuntimeException() throws Exception {
+
+
+        var request = new ProductApiRequest();
+        var data = new ProductApiRequest.Data();
+        data.setType("products");
+
+        data.setAttributes(null);
+        request.setData(data);
+        //
+        ResponseEntity<JsonApiErrorResponse> response =
+                ProductRequestHelper.createProduct(
+                        restTemplate,
+                        request,
+                        new ParameterizedTypeReference<>() {
+                        }
+                );
+
+        // 3
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.INTERNAL_SERVER_ERROR);
+
+        JsonApiErrorResponse errorBody = response.getBody();
+        assertThat(errorBody).isNotNull();
+        assertThat(errorBody.errors()).hasSize(1);
+
+        JsonApiError error = errorBody.errors().getFirst();
+
+        assertThat(error.status()).isEqualTo("500");
+        assertThat(error.title()).isEqualTo("Internal Server Error");
+        assertThat(error.detail()).isEqualTo("Attributes are required");
+
+    }
+
 
 
 }

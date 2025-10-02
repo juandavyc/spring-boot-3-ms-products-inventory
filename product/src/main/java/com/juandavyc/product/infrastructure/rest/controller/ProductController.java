@@ -116,8 +116,8 @@ public class ProductController {
     ) {
 
         var productsPage = productService.getAll(page, size);
-        var response = JsonResponseBuilder.buildProductPage(productsPage);
-        return ResponseEntity.ok(response);
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(JsonResponseBuilder.buildProductPage(productsPage));
     }
 
     @Operation(

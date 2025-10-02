@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
-  <title>Coverage Report > ProductDtoMapper</title>
+  <title>Coverage Report > ProductRequestMapper</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -22,14 +22,14 @@ Current scope:     <a href="../../index.html">all classes</a>
     <a href="../index.html">com.juandavyc.product.application.mapper</a>
 </div>
 
-<h1>Coverage Summary for Class: ProductDtoMapper (com.juandavyc.product.application.mapper)</h1>
+<h1>Coverage Summary for Class: ProductRequestMapper (com.juandavyc.product.application.mapper)</h1>
 
 <table class="coverageStats">
 <tr>
   <th class="name">Class</th>
 </tr>
 <tr>
-  <td class="name">ProductDtoMapper</td>
+  <td class="name">ProductRequestMapper</td>
 </tr>
 
 </table>
@@ -42,13 +42,15 @@ Current scope:     <a href="../../index.html">all classes</a>
 <code class="sourceCode" id="sourceCode">&nbsp;package com.juandavyc.product.application.mapper;
 &nbsp;
 &nbsp;import com.juandavyc.product.domain.model.Product;
-&nbsp;import com.juandavyc.product.domain.model.dto.ProductDto;
+&nbsp;import com.juandavyc.product.infrastructure.rest.dto.request.ProductRequestDto;
 &nbsp;import org.mapstruct.Mapper;
+&nbsp;import org.mapstruct.Mapping;
 &nbsp;
 &nbsp;@Mapper(componentModel = &quot;spring&quot;)
-&nbsp;public interface ProductDtoMapper {
+&nbsp;public interface ProductRequestMapper {
 &nbsp;
-&nbsp;    ProductDto toDto(Product domain);
+&nbsp;    @Mapping(target = &quot;deleted&quot;, constant = &quot;false&quot;)
+&nbsp;    Product toDomain(ProductRequestDto productRequest);
 &nbsp;
 &nbsp;}
 </code>
@@ -74,7 +76,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-10-01 23:52</div>
+    <div style="float:right;">generated on 2025-10-02 09:11</div>
 </div>
 </body>
 </html>

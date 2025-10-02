@@ -56,26 +56,26 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    42,9%
+    100%
   </span>
   <span class="absValue">
-    (3/7)
+    (7/7)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    10%
+    60%
   </span>
   <span class="absValue">
-    (1/10)
+    (6/10)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    22,2%
+    100%
   </span>
   <span class="absValue">
-    (10/45)
+    (45/45)
   </span>
 </td>
 </tr>
@@ -136,78 +136,78 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;    @Override
 &nbsp;    public ProductDto getById(UUID id) {
 &nbsp;
-<b class="nc">&nbsp;        var product = productPersistencePort.findById(id)</b>
-<b class="nc">&nbsp;                .orElseThrow(() -&gt; new ProductNotFoundException(&quot;ID&quot;, id.toString()));</b>
-<b class="nc">&nbsp;        return productDtoMapper.toDto(product);</b>
+<b class="fc">&nbsp;        var product = productPersistencePort.findById(id)</b>
+<b class="fc">&nbsp;                .orElseThrow(() -&gt; new ProductNotFoundException(&quot;ID&quot;, id.toString()));</b>
+<b class="fc">&nbsp;        return productDtoMapper.toDto(product);</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    @Override
 &nbsp;    public ProductPageDto getAll(int page, int size) {
-<b class="nc">&nbsp;        log.info(&quot;retrieving products - page: {}, size: {}&quot;, page, size);</b>
+<b class="fc">&nbsp;        log.info(&quot;retrieving products - page: {}, size: {}&quot;, page, size);</b>
 &nbsp;
 &nbsp;        // index current page
-<b class="nc">&nbsp;        int offset = page * size;</b>
+<b class="fc">&nbsp;        int offset = page * size;</b>
 &nbsp;
-<b class="nc">&nbsp;        var products = productPersistencePort.findAll(offset, size);</b>
+<b class="fc">&nbsp;        var products = productPersistencePort.findAll(offset, size);</b>
 &nbsp;        // count all products in database
-<b class="nc">&nbsp;        long totalElements = productPersistencePort.count();</b>
+<b class="fc">&nbsp;        long totalElements = productPersistencePort.count();</b>
 &nbsp;
 &nbsp;        // total pages
-<b class="nc">&nbsp;        int totalPages = (int) Math.ceil((double) totalElements / size);</b>
-<b class="nc">&nbsp;        var productDtos = products.stream()</b>
-<b class="nc">&nbsp;                .map(productDtoMapper::toDto)</b>
-<b class="nc">&nbsp;                .toList();</b>
+<b class="fc">&nbsp;        int totalPages = (int) Math.ceil((double) totalElements / size);</b>
+<b class="fc">&nbsp;        var productDtos = products.stream()</b>
+<b class="fc">&nbsp;                .map(productDtoMapper::toDto)</b>
+<b class="fc">&nbsp;                .toList();</b>
 &nbsp;
-<b class="nc">&nbsp;        log.debug(&quot;retrieved {} products, total elements: {}&quot;, products.size(), totalElements);</b>
-<b class="nc">&nbsp;        return new ProductPageDto(productDtos, totalElements, totalPages, page, size);</b>
+<b class="fc">&nbsp;        log.debug(&quot;retrieved {} products, total elements: {}&quot;, products.size(), totalElements);</b>
+<b class="fc">&nbsp;        return new ProductPageDto(productDtos, totalElements, totalPages, page, size);</b>
 &nbsp;
 &nbsp;    }
 &nbsp;
 &nbsp;    @Override
 &nbsp;    public ProductDto update(UUID id, ProductRequestDto request) {
-<b class="nc">&nbsp;        log.info(&quot;updating product - id: {}&quot;, id);</b>
+<b class="fc">&nbsp;        log.info(&quot;updating product - id: {}&quot;, id);</b>
 &nbsp;
-<b class="nc">&nbsp;        var existingProduct = productPersistencePort.findById(id)</b>
-<b class="nc">&nbsp;                .orElseThrow(() -&gt; new ProductNotFoundException(&quot;ID&quot;, id.toString()));</b>
+<b class="fc">&nbsp;        var existingProduct = productPersistencePort.findById(id)</b>
+<b class="fc">&nbsp;                .orElseThrow(() -&gt; new ProductNotFoundException(&quot;ID&quot;, id.toString()));</b>
 &nbsp;
-<b class="nc">&nbsp;        if (request.getName() != null &amp;&amp; !request.getName().equals(existingProduct.getName())) {</b>
-<b class="nc">&nbsp;            log.debug(&quot;product name change detected {}&quot;, request.getName());</b>
-<b class="nc">&nbsp;            validateProductNameAvailable(request.getName());</b>
+<b class="pc">&nbsp;        if (request.getName() != null &amp;&amp; !request.getName().equals(existingProduct.getName())) {</b>
+<b class="fc">&nbsp;            log.debug(&quot;product name change detected {}&quot;, request.getName());</b>
+<b class="fc">&nbsp;            validateProductNameAvailable(request.getName());</b>
 &nbsp;        }
 &nbsp;
-<b class="nc">&nbsp;        String newName = (request.getName() != null) ? request.getName() : existingProduct.getName();</b>
-<b class="nc">&nbsp;        BigDecimal newPrice = (request.getPrice() != null) ? request.getPrice() : existingProduct.getPrice();</b>
+<b class="pc">&nbsp;        String newName = (request.getName() != null) ? request.getName() : existingProduct.getName();</b>
+<b class="pc">&nbsp;        BigDecimal newPrice = (request.getPrice() != null) ? request.getPrice() : existingProduct.getPrice();</b>
 &nbsp;
-<b class="nc">&nbsp;        var updatedProduct = new Product(</b>
-<b class="nc">&nbsp;                existingProduct.getId(),</b>
+<b class="fc">&nbsp;        var updatedProduct = new Product(</b>
+<b class="fc">&nbsp;                existingProduct.getId(),</b>
 &nbsp;                newName,
 &nbsp;                newPrice,
-<b class="nc">&nbsp;                existingProduct.getDeleted()</b>
+<b class="fc">&nbsp;                existingProduct.getDeleted()</b>
 &nbsp;        );
 &nbsp;
-<b class="nc">&nbsp;        var savedProduct = productPersistencePort.save(updatedProduct);</b>
-<b class="nc">&nbsp;        log.info(&quot;product updated successfully - id: {}&quot;, savedProduct.getId());</b>
-<b class="nc">&nbsp;        return productDtoMapper.toDto(savedProduct);</b>
+<b class="fc">&nbsp;        var savedProduct = productPersistencePort.save(updatedProduct);</b>
+<b class="fc">&nbsp;        log.info(&quot;product updated successfully - id: {}&quot;, savedProduct.getId());</b>
+<b class="fc">&nbsp;        return productDtoMapper.toDto(savedProduct);</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    @Override
 &nbsp;    public ProductDto softDelete(UUID id) {
-<b class="nc">&nbsp;        log.info(&quot;soft deleting product - id: {}&quot;, id);</b>
-<b class="nc">&nbsp;        var product = productPersistencePort.findById(id)</b>
-<b class="nc">&nbsp;                .orElseThrow(() -&gt; new ProductNotFoundException(&quot;ID&quot;, id.toString()));</b>
+<b class="fc">&nbsp;        log.info(&quot;soft deleting product - id: {}&quot;, id);</b>
+<b class="fc">&nbsp;        var product = productPersistencePort.findById(id)</b>
+<b class="fc">&nbsp;                .orElseThrow(() -&gt; new ProductNotFoundException(&quot;ID&quot;, id.toString()));</b>
 &nbsp;
-<b class="nc">&nbsp;        product.setDeleted(true);</b>
+<b class="fc">&nbsp;        product.setDeleted(true);</b>
 &nbsp;
-<b class="nc">&nbsp;        var deletedProduct = productPersistencePort.save(product);</b>
-<b class="nc">&nbsp;        return productDtoMapper.toDto(deletedProduct);</b>
+<b class="fc">&nbsp;        var deletedProduct = productPersistencePort.save(product);</b>
+<b class="fc">&nbsp;        return productDtoMapper.toDto(deletedProduct);</b>
 &nbsp;    }
 &nbsp;
 &nbsp;
 &nbsp;    private void validateProductNameAvailable(String productName) {
 <b class="fc">&nbsp;        boolean nameExists = productPersistencePort.existsByNameAndDeletedIsFalse(productName);</b>
-<b class="pc">&nbsp;        if (nameExists) {</b>
-<b class="nc">&nbsp;            log.warn(&quot;product name conflict: {}&quot;, productName);</b>
-<b class="nc">&nbsp;            throw new ProductAlreadyExistsException(&quot;Name&quot;, productName);</b>
+<b class="fc">&nbsp;        if (nameExists) {</b>
+<b class="fc">&nbsp;            log.warn(&quot;product name conflict: {}&quot;, productName);</b>
+<b class="fc">&nbsp;            throw new ProductAlreadyExistsException(&quot;Name&quot;, productName);</b>
 &nbsp;        }
 &nbsp;    }
 &nbsp;}
@@ -234,7 +234,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-10-01 23:52</div>
+    <div style="float:right;">generated on 2025-10-02 09:11</div>
 </div>
 </body>
 </html>
