@@ -1,4 +1,4 @@
-package com.juandavyc.inventory.infrastructure.rest.dto;
+package com.juandavyc.inventory.infrastructure.rest.dto.api;
 
 import com.juandavyc.inventory.infrastructure.rest.dto.request.InventoryRequestDto;
 import io.swagger.v3.oas.annotations.media.Schema;

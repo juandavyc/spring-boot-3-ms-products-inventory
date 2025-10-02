@@ -3,8 +3,8 @@ package com.juandavyc.inventory.infrastructure.rest.controller;
 
 import com.juandavyc.inventory.application.exceptions.InvalidRequestException;
 import com.juandavyc.inventory.application.usecases.InventoryService;
-import com.juandavyc.inventory.infrastructure.rest.dto.InventoryApiRequest;
-import com.juandavyc.inventory.infrastructure.rest.dto.InventoryApiResponse;
+import com.juandavyc.inventory.infrastructure.rest.dto.api.InventoryApiRequest;
+import com.juandavyc.inventory.infrastructure.rest.dto.api.InventoryApiResponse;
 import com.juandavyc.inventory.infrastructure.rest.dto.request.InventoryRequestDto;
 import com.juandavyc.inventory.infrastructure.rest.helper.JsonResponseBuilder;
 import lombok.RequiredArgsConstructor;

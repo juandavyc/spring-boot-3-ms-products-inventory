@@ -1,6 +1,7 @@
 package com.juandavyc.inventory.infrastructure.feign;
 
 
+import com.juandavyc.inventory.infrastructure.feign.config.FeignConfig;
 import com.juandavyc.inventory.infrastructure.feign.dto.ProductApiResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.cloud.openfeign.FeignClientsConfiguration;
@@ -11,12 +12,11 @@ import java.util.UUID;
 
 @FeignClient(
         name = "product-service",
-        configuration = FeignClientsConfiguration.class
+        configuration = FeignConfig.class
 )
 public interface ProductFeignClient {
 
     @GetMapping("/api/products/{productId}")
     ProductApiResponse getProductById(@PathVariable("productId") UUID productId);
-
 
 }

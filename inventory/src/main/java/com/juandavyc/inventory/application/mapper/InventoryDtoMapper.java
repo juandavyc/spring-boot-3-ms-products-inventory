@@ -13,8 +13,6 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface InventoryDtoMapper {
 
-
-
     @Mapping(source = "product", target = "included", qualifiedByName = "productToList")
     InventoryDto toDto(Inventory inventory, Product product);
 
@@ -27,6 +25,5 @@ public interface InventoryDtoMapper {
     }
 
     ProductDto toProductDto(Product product);
-
 
 }

@@ -1,6 +1,6 @@
 package com.juandavyc.inventory.application.service;
 
-import com.juandavyc.inventory.application.exceptions.InventoryNotFoundException;
+import com.juandavyc.inventory.application.exceptions.ResourceNotFoundException;
 import com.juandavyc.inventory.application.mapper.InventoryDtoMapper;
 import com.juandavyc.inventory.application.mapper.InventoryRequestMapper;
 import com.juandavyc.inventory.application.usecases.InventoryService;
@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 @Service
@@ -25,20 +25,21 @@ public class InventoryManagementService implements InventoryService {
     private final InventoryRequestMapper inventoryRequestMapper;
     private final InventoryDtoMapper inventoryDtoMapper;
 
-    //
-
     private final ProductPersistencePort productPersistencePort;
-
 
     @Override
     public InventoryDto create(UUID productId, InventoryRequestDto request) {
 
+        var inventory = inventoryPersistencePort.findById(productId);
+
+        if (inventory.isPresent()) {
+            var product = productPersistencePort.getProductById(productId);
+            return inventoryDtoMapper.toDto(inventory.get(), product);
+        }
+
         var product = productPersistencePort.getProductById(productId);
 
-        System.out.println(product.getDeleted());
-        var toCreate = inventoryRequestMapper.toDomain(request);
-
-        toCreate.setProductId(productId);
+        var toCreate = inventoryRequestMapper.toDomain(request, productId);
 
         var productCreated = inventoryPersistencePort.save(toCreate);
 
@@ -47,31 +48,30 @@ public class InventoryManagementService implements InventoryService {
 
     @Override
     public InventoryDto getById(UUID id) {
+
         var inventory = inventoryPersistencePort.findById(id)
-                .orElseThrow(() -> new InventoryNotFoundException("ID", id.toString()));
+                .orElseThrow(() -> new ResourceNotFoundException("Inventory","ID", id.toString()));
         var product = productPersistencePort.getProductById(id);
 
         return inventoryDtoMapper.toDto(inventory, product);
+
     }
 
     @Override
     public InventoryDto update(UUID id, InventoryRequestDto inventoryRequestDto) {
 
-        log.info("updating - id: {}", id);
+        var existingInventory = inventoryPersistencePort.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Inventory","ID", id.toString()));
 
-        var product = productPersistencePort.getProductById(id);
 
-        var existingProduct = inventoryPersistencePort.findById(id)
-                .orElseThrow(() -> new InventoryNotFoundException("ID", id.toString()));
+        if (Objects.equals(existingInventory.getQuantity(), inventoryRequestDto.getQuantity())) {
+            var product = productPersistencePort.getProductById(existingInventory.getProductId());
+            return inventoryDtoMapper.toDto(existingInventory, product);
+        }
 
-        var updatedProduct = new Inventory(
-                existingProduct.getProductId(),
-                inventoryRequestDto.getQuantity()
-        );
-        var saved = inventoryPersistencePort.save(updatedProduct);
-
-        log.info("updated successfully - id: {}", saved.getProductId());
-
+        existingInventory.setQuantity(inventoryRequestDto.getQuantity());
+        var saved = inventoryPersistencePort.save(existingInventory);
+        var product = productPersistencePort.getProductById(existingInventory.getProductId());
         return inventoryDtoMapper.toDto(saved, product);
     }
 

@@ -1,7 +1,7 @@
 package com.juandavyc.inventory.infrastructure.rest.advice;
 
-import com.juandavyc.inventory.application.exceptions.InventoryAlreadyExistsException;
-import com.juandavyc.inventory.application.exceptions.InventoryNotFoundException;
+import com.juandavyc.inventory.application.exceptions.ResourceAlreadyExistsException;
+import com.juandavyc.inventory.application.exceptions.ResourceNotFoundException;
 import com.juandavyc.inventory.infrastructure.rest.dto.error.JsonApiError;
 import com.juandavyc.inventory.infrastructure.rest.dto.error.JsonApiErrorResponse;
 import com.juandavyc.inventory.infrastructure.rest.dto.error.JsonApiErrorSource;
@@ -22,9 +22,9 @@ import java.util.stream.Collectors;
 @Slf4j
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(InventoryNotFoundException.class)
+    @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<JsonApiErrorResponse> handleInventoryNotFound(
-            InventoryNotFoundException ex
+            ResourceNotFoundException ex
     ) {
         log.warn("Inventory not found: {}", ex.getMessage());
         JsonApiError error = JsonApiError.error(
@@ -36,9 +36,9 @@ public class GlobalExceptionHandler {
                 .body(JsonApiErrorResponse.of(error));
     }
 
-    @ExceptionHandler(InventoryAlreadyExistsException.class)
+    @ExceptionHandler(ResourceAlreadyExistsException.class)
     public ResponseEntity<JsonApiErrorResponse> handleInventoryAlreadyExists(
-            InventoryAlreadyExistsException ex
+            ResourceAlreadyExistsException ex
     ) {
         log.warn("Inventory already exists: {}", ex.getMessage());
         JsonApiError error = JsonApiError.error(

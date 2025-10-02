@@ -5,36 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f5213de-5af3-4721-b9da-8148cc7e17d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/dto/ProductDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/port/ProductPersistencePort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/ProductFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/adapter/ProductFeignAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/dto/ProductApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/mapper/ProductMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/controller/InventoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/ProductData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/exceptions/ProductServiceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/config/FeignConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/config/FeignErrorDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/config/FeignInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/src/main/java/com/juandavyc/product/infrastructure/rest/controller/security/ApyKeyFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/InventoryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/InventoryApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/exceptions/InventoryAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/exceptions/ResourceAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/exceptions/InventoryNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/exceptions/ResourceNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryDtoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryDtoMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryRequestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/mapper/InventoryRequestMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/service/InventoryManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/service/InventoryManagementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/usecases/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/application/usecases/InventoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/dto/InventoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/dto/InventoryDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/model/dto/InventoryPageDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/port/InventoryPersistencePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/domain/port/InventoryPersistencePort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/InventorySpringJpaAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/InventorySpringJpaAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/mapper/InventoryEntityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/mapper/InventoryEntityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/repository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/adapter/repository/InventoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiPageResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/ProductFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/ProductFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/adapter/ProductFeignAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/adapter/ProductFeignAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/dto/ProductApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/dto/ProductApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/advice/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/advice/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/controller/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/api/InventoryApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/api/InventoryApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/dto/InventoryResponse.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/helper/JsonResponseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/rest/helper/JsonResponseBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +46,8 @@
       <list>
         <option value="Record" />
         <option value="Enum" />
-        <option value="Exception" />
         <option value="Interface" />
+        <option value="Exception" />
         <option value="Class" />
       </list>
     </option>
@@ -283,12 +276,23 @@
       <workItem from="1759373222990" duration="7189000" />
       <workItem from="1759380455015" duration="6109000" />
       <workItem from="1759412425344" duration="8375000" />
-      <workItem from="1759420827095" duration="13327000" />
+      <workItem from="1759420827095" duration="19393000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/inventory/src/main/java/com/juandavyc/inventory/infrastructure/feign/fallback/ProductFeignFallback.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
